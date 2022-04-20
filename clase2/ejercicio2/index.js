@@ -6,7 +6,7 @@ const futbolistas =[
     {nombre: "Robert Lewandoski", titulos: 23, goles: 500 },
 ]
 
-const estadisticas = {
+let estadisticas = {
     masTitulos : "",
     menosTitulos: "",
     masgoles: "",

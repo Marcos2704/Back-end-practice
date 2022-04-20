@@ -16,4 +16,4 @@ class jugadores {
   const cr7 = new jugadores("Cristiano Ronaldo", 36, ["Sporting", "Manchester United", "Real Madrid", "Juventus"], ["42 titulos"])
   const neymar = new jugadores("Nemar", 30, ["Santos", "Barcelona", "psg"], ["34 titulos"])
 
-  console.log(jugadores)
+  console.log()
