@@ -1,4 +1,4 @@
-const fileMethod = require("../models/filemethods")
+const fileMethod = require("./filemethods")
 const {v4:uuid4 } = require("uuid")
 
 class Movie{

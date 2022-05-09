@@ -19,7 +19,7 @@ const create = async (req, res, next) =>{
       );
 
       try{
-        const movieSaved = await newMovie.saved()
+        const movieSaved = await newMovie.save()
         res.send(movieSaved)
       }
       catch(e){
