@@ -1,13 +1,16 @@
-const express = require("express")
-const moviesRouter = require("./routes/movies")
-const bodyParser = require("body-parser")
+const express = require("express");
+const bodyParser = require("body-parser");
 
-const app = express()
+const moviesRouter = require("./routes/movies");
+const reviewsRouter = require("./routes/reviews");
 
+const app = express();
 
-app.use(bodyParser.json())
-app.use("/api/movies", moviesRouter)
+app.use(bodyParser.json());
 
-app.listen(3000, () =>{
-    console.log("Listening...")
-})
+app.use("/api/movies", moviesRouter);
+app.use("/api/reviews", reviewsRouter);
+
+app.listen(3000, () => {
+  console.log("listening ...");
+});

@@ -1,33 +1,21 @@
-const express = require("express")
-const movieController = require("../controller/movies")
-const router = express.Router()
+const express = require("express");
+const moviesController = require("../controllers/movies");
 
+const router = express.Router();
 
+// /api/movies/create
+router.post("/", moviesController.create);
 
-//CREAR PELICULA
-// /api/movie/create
-router.post("/", movieController.create)
+// /api/movies/search?title=avatar&genre=action
+router.get("/search", moviesController.search);
 
+// /api/movies/id/1234
+router.get("/id/:id", moviesController.getById);
 
-//OBTENER PELICULA POR ID
-// /api/movie/123
-router.get("/id/:id", movieController.getById)
+// /api/movies/id/1234
+router.put("/id/:id", moviesController.updateById);
 
+// /api/movies/1234
+router.delete("/id/:id", moviesController.deleteById);
 
-//OBTENER PELICULA POR TITULO (por ahora solo por titulo)
-// /api/movie/search?tittle=batman
-router.get("/search", movieController.search)
-
-
-//EDITAR PELICULA
-// /api/movie/123
-router.put("/id/:id", movieController.updateById)
-
-
-//BORRAR UNA PELICULA
-router.delete("/id/:id", movieController.deleteMovie)
-
-
-
-
-module.exports = router
+module.exports = router;
